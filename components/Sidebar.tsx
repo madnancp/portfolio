@@ -19,7 +19,7 @@ const Sidebar = () => {
 				</div>
 
 				<h1 className="text-lg font-semibold">Muhammed Adnan</h1>
-				<p className="text-sm text-gray-600">Full Stack & AI/ML</p>
+				<p className="text-sm text-gray-600 dark:text-white">Full Stack & AI/ML</p>
 			</div>
 
 
@@ -27,7 +27,7 @@ const Sidebar = () => {
 				<h2 className="text-xs font-semibold text-muted-foreground mb-1">
 					About
 				</h2>
-				<p className="text-sm text-gray-500">
+				<p className="text-sm text-gray-500 dark:text-white">
 					Passionate about building ML and web apps. Loves Linux & productivity hacks.
 				</p>
 			</div>

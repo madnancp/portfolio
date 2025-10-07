@@ -1,3 +1,4 @@
+// app/layout.tsx
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
@@ -5,6 +6,7 @@ import Sidebar from "@/components/Sidebar";
 import { Separator } from "@/components/ui/separator";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import Header from "@/components/Header";
+import { ThemeProvider } from "@/components/ThemeProvider";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -23,32 +25,28 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="h-full overflow-hidden">
+    <html lang="en" suppressHydrationWarning>
       <body className={`antialiased ${poppins.variable} h-full overflow-hidden`}>
-        <div className="mx-auto max-w-6xl px-4 h-screen">
-          <div className="grid grid-cols-[1fr_1px_3fr] gap-4 h-full py-5">
-            <div className="h-full overflow-hidden">
-              <Sidebar />
-            </div>
-            <Separator
-              orientation="vertical"
-              className="bg-gray-200 h-full"
-            />
-            <ScrollArea className="h-full overflow-auto">
-              <div className="flex flex-col h-full">
-
-                {/* Header */}
-                <Header />
-
-                {/* Page Content */}
-                <main className="flex-1">
-                  {children}
-                </main>
-
+        {/* ✅ ThemeProvider should wrap everything */}
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <div className="mx-auto max-w-6xl px-4 h-screen">
+            <div className="grid grid-cols-[1fr_1px_3fr] gap-4 h-full py-5">
+              <div className="h-full overflow-hidden">
+                <Sidebar />
               </div>
-            </ScrollArea>
+              <Separator
+                orientation="vertical"
+                className="bg-gray-200 h-full dark:bg-white/30"
+              />
+              <ScrollArea className="h-full overflow-auto">
+                <div className="flex flex-col h-full">
+                  <Header />
+                  <main className="flex-1">{children}</main>
+                </div>
+              </ScrollArea>
+            </div>
           </div>
-        </div>
+        </ThemeProvider>
       </body>
     </html>
   );
