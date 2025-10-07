@@ -1,7 +1,11 @@
+import ExperienceSection from "./sections/Experience";
+import HeroSection from "./sections/Hero";
+
 const HomePage = () => {
   return (
     <div className="w-full">
-      <div className="h-screen">hai</div>
+      <HeroSection />
+      <ExperienceSection />
     </div>
   )
 }

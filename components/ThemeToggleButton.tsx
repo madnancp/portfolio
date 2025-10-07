@@ -13,8 +13,8 @@ export function ThemeToggle() {
 
 	return (
 		<Button
-			variant="outline"
 			size="icon"
+			className="bg-transparent hover:bg-transparent text-black dark:text-white"
 			onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
 		>
 			{theme === "dark" ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
