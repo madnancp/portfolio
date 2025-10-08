@@ -1,5 +1,8 @@
 import Image from "next/image";
 import { FaGithub, FaLinkedin, FaXTwitter } from "react-icons/fa6";
+import { Button } from "./ui/button";
+import { DownloadIcon } from "lucide-react";
+import DownloadButton from "./ResumeDownloadButton";
 
 const Sidebar = () => {
 	return (
@@ -66,6 +69,10 @@ const Sidebar = () => {
 						</a>
 					</div>
 				</div>
+			</div>
+
+			<div>
+				<DownloadButton />
 			</div>
 
 
