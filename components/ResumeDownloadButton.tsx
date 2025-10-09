@@ -26,7 +26,7 @@ const DownloadButton = () => {
 		<Button
 			onClick={handleDownload}
 			disabled={isDownloading}
-			className="rounded-full hover:cursor-pointer flex items-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed"
+			className="rounded-full hover:cursor-pointer flex items-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed font-mono"
 		>
 			{isDownloading ? (
 				<Loader className="h-4 w-4 animate-spin" />

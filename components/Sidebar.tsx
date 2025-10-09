@@ -6,7 +6,7 @@ import DownloadButton from "./ResumeDownloadButton";
 
 const Sidebar = () => {
 	return (
-		<aside className="flex flex-col h-full text-start w-full max-w-56 border-r pt-12">
+		<aside className="flex flex-col h-full text-start w-full max-w-56 border-r border-gray-400/50 pt-12">
 			<div className="flex flex-col items-start w-full my-4">
 				<div className="w-32 h-32 overflow-hidden rounded-full">
 					<Image
@@ -20,27 +20,27 @@ const Sidebar = () => {
 				</div>
 
 				<h1 className="text-xl font-semibold">Adnan</h1>
-				<p className="text-sm text-muted-foreground">Full Stack & AI/ML</p>
+				<p className="text-sm text-gray-600 dark:text-muted-foreground">Full Stack & AI/ML</p>
 			</div>
 
 
 			<div className="mb-4">
-				<h2 className="text-xs font-semibold text-muted-foreground mb-1">
-					Social
-				</h2>
-				<div className="space-y-2 text-gray-700 dark:text-gray-200 text-sm">
+				<div className="space-y-2 text-gray-900 dark:text-gray-300 text-md font-mono">
 					{/* LinkedIn */}
-					<div className="flex items-center gap-2">
-						<FaLinkedin className="w-4 h-4 hover:text-blue-600" />
+
+					<div className="flex items-center gap-2 group">
+						<FaLinkedin className="w-4 h-4 group-hover:text-black transition-colors" />
 						<a
 							href="https://linkedin.com/in/madnancp"
 							target="_blank"
 							rel="noopener noreferrer"
-							className="hover:underline"
+							className="flex items-center gap-1 hover:underline transition-all"
 						>
 							in/madnancp
 						</a>
+						<span className="opacity-0 group-hover:opacity-100 translate-x-0.5 transition-all duration-200">↗</span>
 					</div>
+
 
 					{/* GitHub */}
 					<div className="flex items-center gap-2">
