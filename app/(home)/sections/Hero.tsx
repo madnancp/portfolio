@@ -4,13 +4,13 @@ import { motion } from "framer-motion";
 
 const HeroSection = () => {
   return (
-    <section className="max-w-3xl mx-auto">
+    <section className="max-w-4xl mx-auto">
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
       >
-        <p className="text-sm italic text-muted-foreground mb-1">
+        <p className="text-sm italic text-gray-600 dark:text-muted-foreground mb-1 font-mono">
           // Hey there,
         </p>
 
@@ -23,7 +23,7 @@ const HeroSection = () => {
           <span className="italic"> “Done.”</span>
         </p>
 
-        <p className="text-sm italic text-muted-foreground mb-2">
+        <p className="text-sm italic text-gray-600 dark:text-muted-foreground mb-2 font-mono">
           // If I don’t know it yet, I’ll learn it. That’s how I work.
         </p>
 
