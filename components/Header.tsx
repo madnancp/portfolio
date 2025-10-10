@@ -14,7 +14,7 @@ const Header = () => {
 	];
 
 	return (
-		<header className="w-full flex items-center px-6 py-4 bg-none backdrop-blur-3xl sticky top-0 z-50 font-mono">
+		<header className="w-full flex items-center px-6 py-4 bg-transparent backdrop-blur-xs sticky top-0 z-50 font-mono rounded-full">
 			<div></div>
 
 			<div className="ml-auto flex items-center gap-6 text-muted-foreground">

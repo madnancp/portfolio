@@ -43,7 +43,7 @@ const Sidebar = () => {
 
 
 					{/* GitHub */}
-					<div className="flex items-center gap-2">
+					<div className="flex items-center gap-2 group">
 						<FaGithub className="w-4 h-4 hover:text-none" />
 						<a
 							href="https://github.com/madnancp"
@@ -53,11 +53,12 @@ const Sidebar = () => {
 						>
 							@madnancp
 						</a>
+						<span className="opacity-0 group-hover:opacity-100 translate-x-0.5 transition-all duration-200">↗</span>
 					</div>
 
 
 					{/* Twitter/X */}
-					<div className="flex items-center gap-2">
+					<div className="flex items-center gap-2 group">
 						<FaXTwitter className="w-4 h-4 hover:text-sky-500" />
 						<a
 							href="https://x.com/madnancp"
@@ -67,6 +68,7 @@ const Sidebar = () => {
 						>
 							@madnancp
 						</a>
+						<span className="opacity-0 group-hover:opacity-100 translate-x-0.5 transition-all duration-200">↗</span>
 					</div>
 				</div>
 			</div>
