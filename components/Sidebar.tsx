@@ -25,11 +25,11 @@ const Sidebar = () => {
 
 
 			<div className="mb-4">
-				<div className="space-y-2 text-gray-900 dark:text-gray-300 text-md font-mono">
+				<div className="space-y-2 text-gray-900 dark:text-gray-300 text-base font-mono">
 					{/* LinkedIn */}
 
 					<div className="flex items-center gap-2 group">
-						<FaLinkedin className="w-4 h-4 group-hover:text-black transition-colors" />
+						<FaLinkedin className="w-4 h-4 transition-colors" />
 						<a
 							href="https://linkedin.com/in/madnancp"
 							target="_blank"
@@ -59,12 +59,12 @@ const Sidebar = () => {
 
 					{/* Twitter/X */}
 					<div className="flex items-center gap-2 group">
-						<FaXTwitter className="w-4 h-4 hover:text-sky-500" />
+						<FaXTwitter className="w-4 h-4" />
 						<a
 							href="https://x.com/madnancp"
 							target="_blank"
 							rel="noopener noreferrer"
-							className="hover:underline"
+							className="hover:underline group"
 						>
 							@madnancp
 						</a>

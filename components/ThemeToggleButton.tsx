@@ -9,7 +9,6 @@ export function ThemeToggle() {
 
 	useEffect(() => setMounted(true), [])
 	if (!mounted) return null
-	console.log("hai")
 
 	return (
 		<Button

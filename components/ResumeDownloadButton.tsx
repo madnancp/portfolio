@@ -16,7 +16,6 @@ const DownloadButton = () => {
 		link.download = "Adnan_Resume.pdf";
 		link.click();
 
-		// Simulate small delay (UX feedback)
 		setTimeout(() => {
 			setIsDownloading(false);
 		}, 1200);

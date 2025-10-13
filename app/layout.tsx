@@ -34,7 +34,7 @@ export default function RootLayout({
         className={`${poppins.variable} ${jetBrainsMono.variable} antialiased font-sans h-full overflow-hidden`}
       >
 
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
           <div className="mx-auto max-w-6xl px-4 h-screen">
             <div className="grid grid-cols-[1fr_3fr] h-full">
 
