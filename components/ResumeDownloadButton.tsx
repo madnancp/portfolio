@@ -10,7 +10,6 @@ const DownloadButton = () => {
 	const handleDownload = () => {
 		setIsDownloading(true);
 
-		// Create the download link
 		const link = document.createElement("a");
 		link.href = "/adnan_resume.pdf";
 		link.download = "Adnan_Resume.pdf";

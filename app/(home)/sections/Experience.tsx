@@ -1,52 +1,15 @@
-import { ArrowRight } from "lucide-react";
+import { SectionTitle } from "@/components/SectionTitle";
+import { EXPERIENCES } from "@/constats/experience";
+import { Briefcase } from "lucide-react";
 
-const experienceData = [
-  {
-    company: "Grey Codes Solution LLC",
-    location: "Dubai, United Arab Emirates",
-    url: "https://greycodes.ae",
-    isRemote: true, // Add this flag if entire company work is remote
-    roles: [
-      {
-        title: "Assistant Team Lead",
-        type: "Full-time",
-        period: "Sep 2025 - Present",
-        isCurrent: true,
-        achievements: [
-          "Leading an IT team while staying hands-on with development.",
-          "Mentoring team members and maintaining coding standards and best practices."
-        ]
-      },
-      {
-        title: "Full Stack Developer",
-        type: "Internship",
-        period: "Jan - Sep 2025",
-        duration: "9 mos",
-        isCurrent: false,
-        achievements: [
-          "Supervised the project workflow using GitHub, ensuring collaboration among team members.",
-          "Contributed to project strategy and technical decision-making.",
-          "Consistently delivered high-quality work ahead of schedule."
-        ]
-      }
-    ]
-  }
-];
 
 const ExperienceSection = () => {
   return (
-    <section id="resume" className="mt-10">
-      {/* Section title */}
-
-      <div className="flex items-center gap-3 mb-6">
-        <div className="h-2 w-2 bg-black dark:bg-white rounded-full" />
-        <h6 className="tracking-wider font-medium font-mono">
-          Work Experience
-        </h6>
-      </div>
+    <section>
+      <SectionTitle title="Work Experience" />
 
       <div className="max-w-3xl">
-        {experienceData.map((experience, expIdx) => (
+        {EXPERIENCES.map((experience, expIdx) => (
           <div key={expIdx} className="mb-8">
             {/* Company Header */}
             <div className="flex items-start justify-between gap-3 mb-4">
@@ -75,13 +38,13 @@ const ExperienceSection = () => {
                   {/* Icon - only show for current role */}
                   {role.isCurrent && (
                     <div className="absolute left-0 top-1 w-5 h-5 bg-gray-200 dark:bg-gray-700 rounded-full flex items-center justify-center">
-                      <ArrowRight className="w-3 h-3 text-black dark:text-white" />
+                      <Briefcase className="w-3 h-3 text-black dark:text-white" />
                     </div>
                   )}
 
                   {/* Connecting Line - starts from previous role title center */}
                   {role.isCurrent && idx < experience.roles.length - 1 && (
-                    <div className="absolute left-2 top-6 h-full w-0.5 bg-gray-200 dark:bg-gray-700"></div>
+                    <div className="absolute left-2 top-7 h-full w-0.5 bg-gray-200 dark:bg-gray-700"></div>
                   )}
 
                   {/* Role Header */}

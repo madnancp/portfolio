@@ -35,12 +35,12 @@ export default function RootLayout({
       >
 
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
-          <div className="mx-auto max-w-6xl px-4 h-screen">
+          <div className="mx-auto max-w-4xl h-screen">
             <div className="grid grid-cols-[1fr_3fr] h-full">
 
               <Sidebar />
 
-              <ScrollArea className="h-full overflow-auto">
+              <ScrollArea className="h-full overflow-auto pr-10">
                 <div className="flex flex-col h-full">
                   <Header />
                   <main className="flex-1">{children}</main>

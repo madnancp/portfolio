@@ -1,6 +1,10 @@
+import { SectionTitle } from "@/components/SectionTitle";
+
 const ProjectsPage = () => {
   return (
-    <div>hai</div>
+    <section>
+      <SectionTitle title="Projects" />
+    </section>
   )
 }
 

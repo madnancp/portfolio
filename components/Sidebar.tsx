@@ -1,12 +1,10 @@
 import Image from "next/image";
 import { FaGithub, FaLinkedin, FaXTwitter } from "react-icons/fa6";
-import { Button } from "./ui/button";
-import { DownloadIcon } from "lucide-react";
 import DownloadButton from "./ResumeDownloadButton";
 
 const Sidebar = () => {
 	return (
-		<aside className="flex flex-col h-full text-start w-full max-w-56 border-r border-gray-400/50 pt-12">
+		<aside className="flex flex-col h-full text-start w-full max-w-44 border-r border-gray-400/50 pt-12">
 			<div className="flex flex-col items-start w-full my-4">
 				<div className="w-32 h-32 overflow-hidden rounded-full">
 					<Image

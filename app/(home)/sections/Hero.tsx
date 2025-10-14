@@ -1,16 +1,13 @@
 "use client";
 
+import { SectionTitle } from "@/components/SectionTitle";
 import { motion } from "framer-motion";
 
 const HeroSection = () => {
   return (
-    <section className="max-w-4xl mx-auto">
-      <div className="flex items-center gap-3 mb-6">
-        <div className="h-2 w-2 bg-black dark:bg-white rounded-full" />
-        <h6 className="tracking-wider font-medium font-mono">
-          About
-        </h6>
-      </div>
+    <section>
+      <SectionTitle title="About" />
+
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
