@@ -4,7 +4,7 @@ import { GraduationCap } from "lucide-react";
 
 const EducationSection = () => {
   return (
-    <section id="education" className="mt-10">
+    <section className="mt-10">
       {/* Section title */}
       <SectionTitle title="Education" />
 
@@ -14,8 +14,16 @@ const EducationSection = () => {
             {/* Institution Header */}
             <div className="flex items-start justify-between gap-3 mb-4">
               <div>
-                <h4 className="text-base font-bold text-gray-800 dark:text-gray-300">
-                  {education.institution}
+                <h4 className="text-base font-bold text-gray-800 dark:text-gray-300 group gap-2">
+                  <a
+                    href={education.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:underline group"
+                  >
+                    {education.institution}
+                  </a>
+                  <span className="ml-2 opacity-0 group-hover:opacity-100 translate-x-0.5 transition-all duration-200">↗</span>
                 </h4>
                 <p className="text-xs text-gray-600 dark:text-muted-foreground mt-0.5">
                   {education.location}

@@ -4,7 +4,7 @@ import DownloadButton from "./ResumeDownloadButton";
 
 const Sidebar = () => {
 	return (
-		<aside className="flex flex-col h-full text-start w-full max-w-44 border-r border-gray-400/50 pt-12">
+		<aside className="flex flex-col text-start w-full max-w-44 my-12  border-r-3 border-r-text-muted-foreground">
 			<div className="flex flex-col items-start w-full my-4">
 				<div className="w-32 h-32 overflow-hidden rounded-full">
 					<Image
