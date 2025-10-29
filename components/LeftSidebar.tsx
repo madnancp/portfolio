@@ -2,7 +2,7 @@ import Image from "next/image";
 import { FaGithub, FaLinkedin, FaXTwitter } from "react-icons/fa6";
 import DownloadButton from "./ResumeDownloadButton";
 
-const Sidebar = () => {
+const LeftSidebar = () => {
 	return (
 		<aside className="flex flex-col text-start w-full max-w-44 my-12  border-r-3 border-r-text-muted-foreground">
 			<div className="flex flex-col items-start w-full my-4">
@@ -19,6 +19,7 @@ const Sidebar = () => {
 
 				<h1 className="text-xl font-semibold">Adnan</h1>
 				<p className="text-sm text-gray-600 dark:text-muted-foreground">Full Stack & AI/ML</p>
+
 			</div>
 
 
@@ -71,9 +72,10 @@ const Sidebar = () => {
 				</div>
 			</div>
 
-			<div>
+			<div className="mb-4">
 				<DownloadButton />
 			</div>
+
 
 
 		</aside>
@@ -81,4 +83,4 @@ const Sidebar = () => {
 	);
 };
 
-export default Sidebar;
+export default LeftSidebar;

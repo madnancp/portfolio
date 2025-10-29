@@ -5,7 +5,7 @@ import { Briefcase } from "lucide-react";
 
 const ExperienceSection = () => {
   return (
-    <section>
+    <section id="experience">
       <SectionTitle title="Work Experience" />
 
       <div className="max-w-3xl">
@@ -76,7 +76,7 @@ const ExperienceSection = () => {
                         className="text-sm text-gray-700 dark:text-gray-300 flex items-start gap-2"
                       >
                         <span className="text-black dark:text-white font-bold mt-0.5 flex-shrink-0">
-                          ✓
+                          ‣
                         </span>
                         <span className="leading-relaxed">{achievement}</span>
                       </div>

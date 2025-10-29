@@ -4,7 +4,7 @@ import { GemIcon, StarIcon } from "lucide-react";
 
 const SkillSection = () => {
   return (
-    <section>
+    <section id="skills">
       <SectionTitle title="Competencies" />
 
       <div className="space-y-6 max-w-3xl">

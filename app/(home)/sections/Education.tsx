@@ -4,7 +4,7 @@ import { GraduationCap } from "lucide-react";
 
 const EducationSection = () => {
   return (
-    <section className="mt-10">
+    <section className="mt-10" id="education">
       {/* Section title */}
       <SectionTitle title="Education" />
 
@@ -63,7 +63,7 @@ const EducationSection = () => {
                       className="text-sm text-gray-700 dark:text-gray-300 flex items-start gap-2"
                     >
                       <span className="text-black dark:text-white font-bold mt-0.5 flex-shrink-0">
-                        ✓
+                        ‣
                       </span>
                       <span className="leading-relaxed">{highlight}</span>
                     </div>

@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 const HeroSection = () => {
   return (
-    <section>
+    <section id="hero">
       <SectionTitle title="About" />
 
       <motion.div
