@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { DownloadIcon, Loader } from "lucide-react";
 import { Button } from "./ui/button";
+import { Tooltip, TooltipTrigger, TooltipContent } from "./ui/tooltip"
 
 const DownloadButton = () => {
 	const [isDownloading, setIsDownloading] = useState<boolean>(false);
@@ -21,18 +22,27 @@ const DownloadButton = () => {
 	};
 
 	return (
-		<Button
-			onClick={handleDownload}
-			disabled={isDownloading}
-			className="rounded-full hover:cursor-pointer flex items-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed font-mono"
-		>
-			{isDownloading ? (
-				<Loader className="h-4 w-4 animate-spin" />
-			) : (
-				<DownloadIcon className="h-4 w-4" />
-			)}
-			{isDownloading ? "" : "Resume"}
-		</Button>
+		<Tooltip>
+			<TooltipTrigger asChild>
+
+				<Button
+					onClick={handleDownload}
+					disabled={isDownloading}
+					className="rounded-full hover:cursor-pointer flex items-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed font-mono"
+				>
+					{isDownloading ? (
+						<Loader className="h-4 w-4 animate-spin" />
+					) : (
+						<DownloadIcon className="h-4 w-4" />
+					)}
+					{isDownloading ? "" : "Resume"}
+				</Button>
+			</TooltipTrigger>
+
+			<TooltipContent>
+				<p>Download Resume</p>
+			</TooltipContent>
+		</Tooltip>
 	);
 };
 
