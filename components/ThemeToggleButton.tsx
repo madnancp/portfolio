@@ -1,62 +1,56 @@
-import { useTheme } from "next-themes"
-import { Sun, Moon } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { useEffect, useState } from "react"
-import { Tooltip, TooltipTrigger, TooltipContent } from "./ui/tooltip"
-import { AnimatePresence, motion } from "motion/react"
+import { useTheme } from "next-themes";
+import { Sun, Moon } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { useEffect, useState } from "react";
+import { AnimatePresence, motion } from "motion/react";
 
 export function ThemeToggleButton() {
-	const { theme, setTheme } = useTheme()
-	const [mounted, setMounted] = useState(false)
+	const { theme, setTheme } = useTheme();
+	const [mounted, setMounted] = useState(false);
 
-	useEffect(() => setMounted(true), [])
-	if (!mounted) return null
+	useEffect(() => setMounted(true), []);
+	if (!mounted) return null;
+
+	const isDark = theme === "dark";
 
 	return (
-		<Tooltip>
-			<TooltipTrigger asChild>
-
-				<Button
-					size="icon"
-					variant="ghost"
-					className="rounded-full text-black dark:text-white cursor-pointer transition-colors duration-500 relative"
-					onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+		<Button
+			variant="secondary"
+			className="rounded-full cursor-pointer transition-all duration-200 relative font-mono px-3"
+			onClick={() => setTheme(isDark ? "light" : "dark")}
+		>
+			<div className="flex items-center gap-1.5">
+				{/* Icon animation (rotating) */}
+				<motion.div
+					key={isDark ? "sun" : "moon"}
+					initial={{ rotate: isDark ? -90 : 90, opacity: 0, scale: 0.8 }}
+					animate={{ rotate: 0, opacity: 1, scale: 1 }}
+					exit={{ rotate: isDark ? 90 : -90, opacity: 0, scale: 0.8 }}
+					transition={{ duration: 0.1, ease: "easeInOut" }}
 				>
-					<AnimatePresence mode="wait" initial={false}>
-						{theme === "dark" ? (
-							<motion.span
-								key="sun"
-								initial={{ opacity: 0, rotate: -90, scale: 0.8 }}
-								animate={{ opacity: 1, rotate: 0, scale: 1 }}
-								exit={{ opacity: 0, rotate: 90, scale: 0.8 }}
-								transition={{ duration: 0.4, ease: "easeInOut" }}
-								className="absolute inset-0 flex items-center justify-center"
-							>
-								<Sun className="h-4 w-4" />
-							</motion.span>
-						) : (
-							<motion.span
-								key="moon"
-								initial={{ opacity: 0, rotate: 90, scale: 0.8 }}
-								animate={{ opacity: 1, rotate: 0, scale: 1 }}
-								exit={{ opacity: 0, rotate: -90, scale: 0.8 }}
-								transition={{ duration: 0.4, ease: "easeInOut" }}
-								className="absolute inset-0 flex items-center justify-center"
-							>
-								<Moon className="h-4 w-4" />
-							</motion.span>
-						)}
-					</AnimatePresence>
+					{isDark ? (
+						<Sun className="h-3.5 w-3.5" />
+					) : (
+						<Moon className="h-3.5 w-3.5" />
+					)}
+				</motion.div>
 
-					<span className="sr-only">Toggle theme</span>
-				</Button>
-			</TooltipTrigger>
+				{/* Text fade (smooth transition) */}
+				<AnimatePresence mode="wait">
+					<motion.span
+						key={isDark ? "light-text" : "dark-text"}
+						initial={{ opacity: 0, y: 5 }}
+						animate={{ opacity: 1, y: 0 }}
+						exit={{ opacity: 0, y: -5 }}
+						transition={{ duration: 0.1, ease: "easeOut" }}
+						className="text-xs font-medium"
+					>
+						{isDark ? "Light" : "Dark"}
+					</motion.span>
+				</AnimatePresence>
+			</div>
 
-			<TooltipContent>
-				<p>Switch mood</p>
-
-			</TooltipContent>
-
-		</Tooltip>
-	)
+			<span className="sr-only">Toggle theme</span>
+		</Button>
+	);
 }

@@ -5,7 +5,7 @@ import { DownloadIcon, Loader } from "lucide-react";
 import { Button } from "./ui/button";
 import { Tooltip, TooltipTrigger, TooltipContent } from "./ui/tooltip"
 
-const DownloadButton = () => {
+const ResumeDownloadButton = () => {
 	const [isDownloading, setIsDownloading] = useState<boolean>(false);
 
 	const handleDownload = () => {
@@ -31,9 +31,9 @@ const DownloadButton = () => {
 					className="rounded-full hover:cursor-pointer flex items-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed font-mono"
 				>
 					{isDownloading ? (
-						<Loader className="h-4 w-4 animate-spin" />
+						<Loader className="h-3.5 w-3.5 animate-spin" />
 					) : (
-						<DownloadIcon className="h-4 w-4" />
+						<DownloadIcon className="h-3.5 w-3.5" />
 					)}
 					{isDownloading ? "" : "Resume"}
 				</Button>
@@ -46,4 +46,4 @@ const DownloadButton = () => {
 	);
 };
 
-export default DownloadButton;
+export default ResumeDownloadButton;
