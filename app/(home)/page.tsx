@@ -1,6 +1,5 @@
-import EducationSection from "./sections/Education";
-import ExperienceSection from "./sections/Experience";
-import FeaturedProjects from "./sections/FeaturedProjects";
+import JourneySection from "./sections/Journey";
+import ProjectsSection from "./sections/Projects";
 import HeroSection from "./sections/Hero";
 import SkillSection from "./sections/Skills";
 
@@ -8,10 +7,9 @@ const HomePage = () => {
   return (
     <div className="w-full space-y-16">
       <HeroSection />
-      <ExperienceSection />
-      <FeaturedProjects />
+      <JourneySection />
+      <ProjectsSection />
       <SkillSection />
-      <EducationSection />
     </div>
   )
 }

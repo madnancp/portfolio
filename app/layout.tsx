@@ -37,8 +37,8 @@ export default function RootLayout({
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
           <TooltipProvider delayDuration={1000}>
             {/* Container */}
-            <div className="mx-auto max-w-5xl h-screen px-4">
-              <div className="grid grid-cols-[200px_1fr_200px] h-full gap-2">
+            <div className="mx-auto max-w-7xl h-screen px-4">
+              <div className="grid grid-cols-[200px_800px_200px] h-full gap-2">
                 {/* Left Sidebar */}
                 <aside className="sticky top-0 h-full">
                   <LeftSidebar />

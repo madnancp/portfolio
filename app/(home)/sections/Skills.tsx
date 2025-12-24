@@ -1,26 +1,16 @@
 import { SectionTitle } from "@/components/SectionTitle"
-import { COMPETENCIES } from "@/constats/competencies";
+import { Button } from "@/components/ui/button";
+import { SKILLS } from "@/constats/skills";
 import { GemIcon, StarIcon } from "lucide-react";
 
 const SkillSection = () => {
   return (
     <section id="skills">
-      <SectionTitle title="Competencies" />
+      <SectionTitle title="I'm proficient in" />
 
-      <div className="space-y-6 max-w-3xl">
-        {COMPETENCIES.map((comp, idx) => (
-          <div key={idx}>
-            <h3 className="text-sm font-semibold text-gray-800 dark:text-gray-300 mb-1">
-              {comp.area}
-            </h3>
-            <p className="text-xs text-gray-600 dark:text-muted-foreground mb-2">
-              {comp.description}
-            </p>
-            <p className="text-xs text-gray-600 dark:text-muted-foreground flex items-center gap-2 font-mono">
-              <GemIcon size={10} className="" />
-              {comp.key}
-            </p>
-          </div>
+      <div className="space-y-6 max-w-3xl space-x-4">
+        {SKILLS.map((comp, idx) => (
+          <Button className="rounded-full" key={idx} variant={"secondary"}>{comp}</Button>
         ))}
       </div>
     </section>

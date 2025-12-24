@@ -3,10 +3,10 @@ import { EXPERIENCES } from "@/constats/experience";
 import { Briefcase } from "lucide-react";
 
 
-const ExperienceSection = () => {
+const JourneySection = () => {
   return (
     <section id="experience">
-      <SectionTitle title="Work Experience" />
+      <SectionTitle title="Journey" />
 
       <div className="max-w-3xl">
         {EXPERIENCES.map((experience, expIdx) => (
@@ -92,4 +92,4 @@ const ExperienceSection = () => {
   );
 };
 
-export default ExperienceSection;
+export default JourneySection;

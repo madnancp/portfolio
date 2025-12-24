@@ -28,12 +28,12 @@ const ResumeDownloadButton = () => {
 				<Button
 					onClick={handleDownload}
 					disabled={isDownloading}
-					className="rounded-full hover:cursor-pointer flex items-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed font-mono"
+					className="rounded-full hover:cursor-pointer flex items-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed font-mono text-base"
 				>
 					{isDownloading ? (
-						<Loader className="h-3.5 w-3.5 animate-spin" />
+						<Loader className="animate-spin" size={20} />
 					) : (
-						<DownloadIcon className="h-3.5 w-3.5" />
+						<DownloadIcon size={20} />
 					)}
 					{isDownloading ? "" : "Resume"}
 				</Button>
