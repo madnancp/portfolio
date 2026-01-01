@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
 import { JetBrains_Mono, Poppins } from "next/font/google";
 import "./globals.css";
-import LeftSidebar from "@/components/LeftSidebar";
+import Sidebar from "@/components/Sidebar";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { ThemeProvider } from "@/components/ThemeProvider";
-import RightSidebar from "@/components/RightSidebar";
 import { TooltipProvider } from "@/components/ui/tooltip";
 
 const jetBrainsMono = JetBrains_Mono({
@@ -15,7 +14,8 @@ const jetBrainsMono = JetBrains_Mono({
 
 const poppins = Poppins({
   subsets: ["latin"],
-  weight: ["400", "600"],
+  display: "swap",
+  weight: ["400", "600", "700", "800", "900"],
   variable: "--font-poppins",
 });
 
@@ -37,11 +37,11 @@ export default function RootLayout({
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
           <TooltipProvider delayDuration={1000}>
             {/* Container */}
-            <div className="mx-auto max-w-7xl h-screen px-4">
-              <div className="grid grid-cols-[200px_800px_200px] h-full gap-2">
+            <div className="mx-auto max-w-6xl h-screen px-4">
+              <div className="grid grid-cols-[200px_800px] h-full gap-2">
                 {/* Left Sidebar */}
                 <aside className="sticky top-0 h-full">
-                  <LeftSidebar />
+                  <Sidebar />
                 </aside>
 
                 {/* Main Content */}
@@ -51,10 +51,6 @@ export default function RootLayout({
                   </main>
                 </ScrollArea>
 
-                {/* Right Sidebar */}
-                <aside className="sticky top-0 h-full">
-                  <RightSidebar />
-                </aside>
               </div>
             </div>
           </TooltipProvider>
