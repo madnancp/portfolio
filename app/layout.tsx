@@ -3,8 +3,7 @@ import { JetBrains_Mono, Poppins } from "next/font/google";
 import "./globals.css";
 import Sidebar from "@/components/Sidebar";
 import { ScrollArea } from "@/components/ui/scroll-area";
-import { ThemeProvider } from "@/components/ThemeProvider";
-import { TooltipProvider } from "@/components/ui/tooltip";
+import Footer from "@/components/Footer";
 
 const jetBrainsMono = JetBrains_Mono({
   subsets: ["latin"],
@@ -34,27 +33,24 @@ export default function RootLayout({
       <body
         className={`${poppins.variable} ${jetBrainsMono.variable} antialiased font-sans min-h-screen transition-colors duration-1000`}
       >
-        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
-          <TooltipProvider delayDuration={1000}>
-            {/* Container */}
-            <div className="mx-auto max-w-6xl h-screen px-4">
-              <div className="grid grid-cols-[200px_800px] h-full gap-2">
-                {/* Left Sidebar */}
-                <aside className="sticky top-0 h-full">
-                  <Sidebar />
-                </aside>
+        {/* Container */}
+        <div className="mx-auto max-w-6xl h-screen px-4">
+          <div className="grid grid-cols-[220px_minmax(0,1fr)] h-full gap-6">
+            {/* Left Sidebar */}
+            <aside className="sticky top-0 h-full">
+              <Sidebar />
+            </aside>
 
-                {/* Main Content */}
-                <ScrollArea className="h-full overflow-auto">
-                  <main className="py-10 space-y-20 px-4">
-                    {children}
-                  </main>
-                </ScrollArea>
+            {/* Main Content */}
+            <ScrollArea className="h-full overflow-auto">
+              <main className="py-14 space-y-28 px-6">
+                {children}
+                <Footer />
+              </main>
+            </ScrollArea>
 
-              </div>
-            </div>
-          </TooltipProvider>
-        </ThemeProvider>
+          </div>
+        </div>
       </body>
     </html >
   );
