@@ -1,30 +1,13 @@
 const Footer = () => {
 	return (
-		<footer className="mt-32 pb-16 text-sm text-muted-foreground">
-			<div className="space-y-4">
-				<div className="space-y-1">
-					<p>
-						email ·{" "}
-						<a
-							href="mailto:adnan@example.com"
-							className="hover:underline"
-						>
-							adnan@example.com
-						</a>
-					</p>
+		<footer className="mt-20 pb-12 text-xs text-muted-foreground/60">
+			<p>
+				<a href="/resume.pdf" className="hover:text-foreground transition-colors">
+					Resume
+				</a>
+			</p>
 
-					<p>
-						resume ·{" "}
-						<a
-							href="/resume"
-							className="hover:underline"
-						>
-							adnan.dev/resume
-						</a>
-					</p>
-				</div>
-
-			</div>
+			<p>Updated on Jan 2026</p>
 		</footer>
 	);
 };

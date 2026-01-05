@@ -43,7 +43,7 @@ export default function RootLayout({
 
             {/* Main Content */}
             <ScrollArea className="h-full overflow-auto">
-              <main className="py-14 space-y-28 px-6">
+              <main className="py-14 space-y-20 px-6">
                 {children}
                 <Footer />
               </main>
