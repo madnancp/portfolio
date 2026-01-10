@@ -2,15 +2,15 @@ import { Project } from "./types";
 
 export const PROJECTS: Project[] = [
   {
-    title: "Wofi Bluetoth",
-    tags: ["Shell", "Hyperland", "Wayland", "Wofi"],
-    link: "https://google.com",
-    description: "Bluetooth menu for wayland based system, Uses wofi menu launcher"
+    title: "btmenu",
+    description: "Bluetooth menu for wayland based system, Uses wofi menu launcher",
+    tech: ["Shell", "Hyperland", "Wayland", "Wofi"],
+    github: "http://github.com/madnancp/btmenu/",
   },
   {
-    title: "CommitxAI",
-    tags: ["Python", "Llamacpp"],
-    link: "https://youtube.com",
-    description: "AI based commit message generator"
+    title: "Markdown Note Taker",
+    description: "A markdown based note taking cloude based application.",
+    tech: ["Next.js", "Django", "Psql", "REST"],
+    github: "https://youtube.com",
   }
 ]

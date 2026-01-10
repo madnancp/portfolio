@@ -1,6 +1,5 @@
 "use client"
-import { AtSignIcon, MailIcon } from "lucide-react";
-import Image from "next/image";
+import { AtSignIcon } from "lucide-react";
 import { FaGithub, FaLinkedin, FaXTwitter } from "react-icons/fa6";
 
 const Sidebar = () => {
@@ -8,18 +7,8 @@ const Sidebar = () => {
 		<aside className="flex flex-col h-full w-full max-w-[220px] py-6">
 			{/* Profile Section */}
 			<div className="flex flex-col items-start w-full my-4">
-				<div className="w-30 h-30 overflow-hidden rounded-sm">
-					<Image
-						src="/adnan_dp.jpg"
-						alt="Profile photo"
-						width={200}
-						height={200}
-						draggable={false}
-						className="object-center"
-					/>
-				</div>
 				<h1 className="text-xl font-semibold mt-4 leading-tight">Adnan Muhammed</h1>
-				<p className="text-base text-muted-foreground">
+				<p className="text-base text-muted-foreground lowercase">
 					Software Developer
 				</p>
 			</div>
@@ -36,7 +25,7 @@ const Sidebar = () => {
 							className="flex items-center gap-2 hover:underline transition-all"
 						>
 							<FaLinkedin size={16} />
-							in/madnancp
+							LinkedIn
 						</a>
 					</div>
 
@@ -49,7 +38,7 @@ const Sidebar = () => {
 							className="flex items-center gap-2 hover:underline transition-all"
 						>
 							<FaGithub size={16} />
-							@madnancp
+							Github
 						</a>
 					</div>
 
@@ -62,7 +51,7 @@ const Sidebar = () => {
 							className="flex items-center gap-2 hover:underline transition-all"
 						>
 							<FaXTwitter size={16} />
-							@madnancp
+							X
 						</a>
 					</div>
 
@@ -75,7 +64,7 @@ const Sidebar = () => {
 							className="flex items-center gap-2 hover:underline transition-all"
 						>
 							<AtSignIcon size={16} />
-							email
+							Email
 						</a>
 					</div>
 				</div>

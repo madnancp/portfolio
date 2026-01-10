@@ -1,3 +1,4 @@
+import { ProjectCard } from "@/components/ProjectsCard";
 import { SectionTitle } from "@/components/SectionTitle";
 import { PROJECTS } from "@/constats/projects";
 
@@ -6,15 +7,11 @@ const ProjectsSection = () => {
     <section>
       <SectionTitle title=" Projects" />
 
-      {PROJECTS.map((project, idx) => (
-        <div key={idx} className="border border-gray-300 dark:border-gray-700 rounded-md p-4 mb-6">
-          <h4 className="font-bold text-lg mb-1">{project.title}</h4>
-          <p className="text-muted-foreground">{project.description}</p>
-          {project.tags.map((tag, tagIdx) => (
-            <p id={tagIdx}>{tag}</p>
-          ))}
-        </div>
-      ))}
+      <div className="grid sm:grid-cols-2 gap-4">
+        {PROJECTS.map((project, idx) => (
+          <ProjectCard key={idx} title={project.title} description={project.description} tech={project.tech} github={project.github} />
+        ))}
+      </div>
     </section>
   )
 }

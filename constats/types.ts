@@ -1,8 +1,8 @@
 export interface Project {
   title: string
+  tech: string[]
+  github: string
   description: string
-  tags: string[]
-  link: string
 }
 
 interface ExperienceRole {
