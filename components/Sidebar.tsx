@@ -8,14 +8,14 @@ const Sidebar = () => {
 		<aside className="flex flex-col h-full w-full max-w-[220px] py-6">
 			{/* Profile Section */}
 			<div className="flex flex-col items-start w-full my-4">
-				<div className="w-28 h-28 overflow-hidden rounded-full">
+				<div className="w-30 h-30 overflow-hidden rounded-sm">
 					<Image
-						src="/121A8516.jpg"
+						src="/adnan_dp.jpg"
 						alt="Profile photo"
-						width={150}
-						height={150}
+						width={200}
+						height={200}
 						draggable={false}
-						className="object-cover"
+						className="object-center"
 					/>
 				</div>
 				<h1 className="text-xl font-semibold mt-4 leading-tight">Adnan Muhammed</h1>
