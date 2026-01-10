@@ -1,13 +1,7 @@
 const Footer = () => {
 	return (
-		<footer className="mt-20 pb-12 text-xs text-muted-foreground/60">
-			<p>
-				<a href="/resume.pdf" className="hover:text-foreground transition-colors">
-					Resume
-				</a>
-			</p>
-
-			<p>Updated on Jan 2026</p>
+		<footer className="mt-24 pt-8 border-t border-border/40 text-xs text-muted-foreground/60">
+			<p>Updated · Jan 2026</p>
 		</footer>
 	);
 };
